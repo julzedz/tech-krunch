@@ -1,6 +1,8 @@
-<h1>List of Users with Post Count:</h1>
-<ul>
+<h1>List of Users And Post Count:</h1>
+<div>
+  <ul>
   <% @users.each do |user| %>
-    <li><%= link_to user.name, user_path(user) %> - <%= user.posts_counter %> posts</li>
+    <li><%= display_user_photo(user) %> <%= link_to user.name, user_path(user) %> - <%= user.posts_counter %> posts</li>
   <% end %>
 </ul>
+</div>

@@ -1,6 +1,16 @@
-<h1>List of Posts:</h1>
-<ul>
+<h2><%= @user.name %> </h2>
+<h3><%= @user.posts_counter %> posts</h3>
+<br>
+<h3>List of Posts:</h3>
+<div>
   <% @posts.each do |post| %>
-    <li><%= link_to post.title, user_posts_path(@user, post) %></li>
+  <%= link_to "/users/#{@user.id}/posts/#{post.id}", class: 'user-wraps' do %>
+          <h3 class="secundary-text">Post #<%= post.id %> <%= post.title %></h3>
+          <p class="text"><%= post.text %></p>
+          <span class="post-counter text">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
+          <% post.most_recent_comments.each do |comment| %>
+          <p><%= comment.user.name %>: <span> <%= comment.text %> </span> </p>
+        <% end %>
+        <% end %>
   <% end %>
-</ul>
+</div>
