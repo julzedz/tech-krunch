@@ -1,10 +1,15 @@
 <h1>User Info:</h1>
-<p>Name: <%= @user.name %></p>
+<p>Name: <%= @user.name %> <%= @user.posts_counter %> posts</p>
 <p>Bio: <%= @user.bio %></p>
 
 <h2>Recent Posts:</h2>
 <ul>
   <% @user.most_recent_posts.each do |post| %>
-    <li><%= link_to post.title, user_path(@user, post) %></li>
-  <% end %>
+        <%= link_to "/users/#{@user.id}/posts/#{post.id}", class: 'user-wraps' do %>
+          <h3 class="secundary-text">Post #<%= post.id %> <%= post.title %></h3>
+          <p class="text"><%= post.text %></p>
+          <span class="post-counter text">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
+        <% end %>
+        
+      <% end %>
 </ul>
