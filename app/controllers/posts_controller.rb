@@ -17,10 +17,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params.require(:post).permit(:title, :text))
-    @post.author = current_user
+    @post.user = current_user
     if @post.save
       flash[:success] = 'Post created successfully'
-      redirect_to user_post_path(@post.author, @post)
+      redirect_to user_post_path(@post.user, @post)
     else
       flash.now[:error] = 'Something went wrong'
       render :new, status: 422
