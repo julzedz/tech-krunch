@@ -9,6 +9,6 @@ class CommentsController < ApplicationController
       flash[:error] = 'Something went wrong'
       puts 'error'
     end
-    redirect_to user_post_path(@comment.post.author, @comment.post)
+    redirect_to user_post_path(@comment.post.author_id, @comment.post)
   end
 end
