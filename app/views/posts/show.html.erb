@@ -8,7 +8,7 @@
 <h2>Recent Comments:</h2>
 <ul>
   <% @post.comments.each do |comment| %>
-    <li><%= comment.user %> - <%= comment.text %></li>
+    <li><%= comment.user %> - <%= comment.text %> <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.user } %></li>
   <% end %>
 </ul>
 <%= render 'comments/newcomment' %>
