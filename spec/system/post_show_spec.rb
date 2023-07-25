@@ -30,4 +30,9 @@ RSpec.describe 'Post Show', type: :system do
     visit user_post_path(user_id: user.id, id: post.id)
     expect(page).to have_content(post.likes_counter)
   end
+
+  it 'displays the post text' do
+    visit user_post_path(user_id: user.id, id: post.id)
+    expect(page).to have_content(post.text)
+  end
 end
