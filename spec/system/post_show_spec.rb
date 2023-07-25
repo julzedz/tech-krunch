@@ -40,4 +40,9 @@ RSpec.describe 'Post Show', type: :system do
     visit user_post_path(user_id: user.id, id: post.id)
     expect(page).to have_content(comment.user.name)
   end
+
+  it 'displays the comment text' do
+    visit user_post_path(user_id: user.id, id: post.id)
+    expect(page).to have_content(comment.text)
+  end
 end
