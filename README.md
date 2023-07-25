@@ -93,6 +93,11 @@ Open your browser and navigate to:
 - GitHub: [@julzedz](https://github.com/julzedz)
 - LinkedIn: [Jules Edozie](https://www.linkedin.com/in/julesedozie/)
 
+👤 **Santiago Munoz**
+
+- GitHub: [@smunoz](https://github.com/smunoz1988)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-munoz-0b2b1a260)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
