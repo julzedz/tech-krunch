@@ -1,4 +1,5 @@
 <h2>User Info:</h2>
+<p><%= display_user_photo(@user) %></p>
 <p>Name: <%= @user.name %> <%= @user.posts_counter %> posts</p>
 <p>Bio: <%= @user.bio %></p>
 
@@ -13,3 +14,10 @@
         
       <% end %><li><br>
 </ul>
+<div>
+  <div class="seeAllPostBtn">
+    <button>
+     <%= link_to 'See all Posts', user_posts_path(@user) %>
+    </button>
+  </div>    
+</div>
