@@ -1,16 +1,18 @@
+<img src="<%= @user.photo %>" alt="user Photo" class="photo">
 <h2><%= @user.name %> </h2>
 <h3><%= @user.posts_counter %> posts</h3>
 <br>
 <h3>List of Posts:</h3>
 <div>
-  <% @posts.each do |post| %>
+  <% @posts.includes(:user).each do |post| %>
   <%= link_to "/users/#{@user.id}/posts/#{post.id}", class: 'user-wraps' do %>
           <h3 class="secundary-text">Post #<%= post.id %> <%= post.title %></h3>
           <p class="text"><%= post.text %></p>
           <span class="post-counter text">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
-          <% post.most_recent_comments.each do |comment| %>
+          <% post.most_recent_comments.includes(:user).each do |comment| %>
           <p><%= comment.user.name %>: <span> <%= comment.text %> </span> </p>
         <% end %>
-        <% end %>
+        <% end %><br><br>
   <% end %>
 </div>
+<button class="button">Pagination</button>
