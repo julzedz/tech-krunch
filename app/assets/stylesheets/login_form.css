@@ -1,0 +1,22 @@
+body {
+  width: 50%;
+  margin: 5em auto;
+}
+
+.field {
+  width: 70%;
+  margin: auto;
+  background: beige;
+  text-align: center;
+}
+
+.actions {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 2em auto;
+  width: 50%;
+}

@@ -103,6 +103,7 @@ Open your browser and navigate to:
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] **User Interface**
 - [ ] **Forms**
+- [ ] **User log in, sign up and sign out methods**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
