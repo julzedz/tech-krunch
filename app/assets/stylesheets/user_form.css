@@ -1,17 +1,19 @@
 body {
   width: 50%;
-  background: beige;
   margin: 5em auto;
 }
 
 .field {
-  width: 70%;
+  background: beige;
+  width: 50%;
   margin: auto;
+  text-align: center;
 }
 
 .actions {
   width: 50%;
   margin: auto;
+  text-align: center;
 }
 
 h2 {
